@@ -20,11 +20,7 @@ pipeline{
 		}
 		
 		stage("test"){
-            when {
-                expression {
-                    //env.BRANCH_NAME == 'dev'
-                }
-            }
+            //when {expression {env.BRANCH_NAME == 'dev'}}
 			steps{
                 script {
 				    groovy.test()
@@ -43,16 +39,9 @@ pipeline{
 
     post{
 
-        always{
-            //Ex.:send email of status
-        }
-
-        failure{
-            //Ex.: ?
-        }
-        success{
-            //Ex.: ?
-        }
+        //always{}//Ex.:send email of status
+        //failure{}//Ex.: ?
+        //success{}//Ex.: ?
 
     }
 }
