@@ -13,7 +13,7 @@ def deploy(){
     echo 'deploying in a groovy way...'
     sh 'sudo  cp -R dist/teste-jenkins /home/arena/applications'    
     sh 'sudo  cp /home/arena/applications/teste-jenkins/assets/logo_.png /home/arena/applications/teste-jenkins/assets/logo.png'    
-    sh 'lite-server --baseDir="/home/arena/applications/teste-jenkins"'    
+    sh 'lite-server --baseDir="/home/arena/applications/teste-jenkins" --verbose --port=8082'    
 }
 
 return this
