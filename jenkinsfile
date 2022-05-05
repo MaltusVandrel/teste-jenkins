@@ -37,11 +37,5 @@ pipeline{
 		}	
 	}
 
-    post{
-
-        //always{}//Ex.:send email of status
-        //failure{}//Ex.: ?
-        //success{}//Ex.: ?
-
-    }
+    // post{ always{} failure{} success{} }
 }
