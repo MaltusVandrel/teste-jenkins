@@ -1,12 +1,13 @@
-def test(){
-    echo 'testing in a groovy way...'
-    sh 'ng test'    
-}
+
 def build(){
     echo 'building in a groovy way...'
     sh 'npm install'
     sh 'ng build'
     
+}
+def test(){
+    echo 'testing in a groovy way...'
+    // sh 'ng test'    
 }
 def deploy(){
     echo 'deploying in a groovy way...'
