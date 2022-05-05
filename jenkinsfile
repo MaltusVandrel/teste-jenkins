@@ -26,13 +26,17 @@ pipeline{
                 }
             }
 			steps{
-				groovy.test()
+                script {
+				    groovy.test()
+                }
 			}
 		}
 		
 		stage("deploy"){
 			steps{
-				groovy.deploy()
+                script {
+				    groovy.deploy()
+                }
 			}
 		}	
 	}
