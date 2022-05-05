@@ -5,7 +5,6 @@ def test(){
 def build(){
     echo 'building in a groovy way...'
     sh 'ng build --watch'
-    sh 'ng build --watch'
     
 }
 def deploy(){
