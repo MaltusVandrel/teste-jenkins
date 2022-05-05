@@ -1,25 +1,54 @@
+//Enverioment Variables: http://172.16.98.242:8081/env-vars.html/
 pipeline{
 
 	agent any
 	
 	stages {
-	
+	    stage("init"){
+			steps{
+				script {
+                     groovy = load "groovy-script/script.groovy"
+                }                
+			}
+		}
 		stage("build"){
 			steps{
-				echo "Build stage..."
+				script {
+                    groovy.build()
+                }                
 			}
 		}
 		
 		stage("test"){
+            when {
+                expression {
+                    //env.BRANCH_NAME == 'dev'
+                }
+            }
 			steps{
-				echo "Test stage..."
+				groovy.test()
 			}
 		}
 		
 		stage("deploy"){
 			steps{
-				echo "Deploy stage..."
+				groovy.deploy()
 			}
 		}	
 	}
+
+    post{
+
+        always{
+            //Ex.:send email of status
+        }
+
+        failure{
+            //Ex.: ?
+        }
+        success:{
+            //Ex.: ?
+        }
+
+    }
 }
