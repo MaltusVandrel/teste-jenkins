@@ -4,6 +4,7 @@ def test(){
 }
 def build(){
     echo 'building in a groovy way...'
+    sh 'npm install'
     sh 'ng build --watch'
     
 }
