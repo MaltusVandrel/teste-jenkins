@@ -7,7 +7,7 @@ pipeline{
 	    stage("init"){
 			steps{
 				script {
-                     groovy = load "groovy-script/script.groovy"
+                     groovy = load "groovy-scripts/script.groovy"
                 }                
 			}
 		}
