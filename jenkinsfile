@@ -50,7 +50,7 @@ pipeline{
         failure{
             //Ex.: ?
         }
-        success:{
+        success{
             //Ex.: ?
         }
 
